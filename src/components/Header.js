@@ -1,7 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 
-const Header = () => {
-  return <div className="header-container">TODOアプリ</div>;
-};
+class Header extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return <div className="header-container">TODOアプリ</div>;
+  }
+}
 
 export default Header;
