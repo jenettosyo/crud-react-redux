@@ -33,9 +33,9 @@ class Form extends Component {
           <button className="add-btn">ADD</button>
         </form>
         <div className="todo-container">
-          {/* {this.props.list.map((list, index) => {
+          {this.props.list.map((list, index) => {
             return <TodoIndex list={list} key={index} />;
-          })} */}
+          })}
         </div>
       </div>
     );
