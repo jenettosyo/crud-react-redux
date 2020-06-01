@@ -32,7 +32,9 @@ class Form extends Component {
             name="todo"
             onChange={(e) => this.setState({ todo: e.target.value })}
           />
-          <button className="add-btn">ADD</button>
+          <button className="add-btn" disabled={this.state.todo === ""}>
+            ADD
+          </button>
         </form>
         <div className="todo-container">
           {this.props.todo.map((list, index) => {
