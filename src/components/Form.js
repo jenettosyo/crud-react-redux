@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { addEvent } from "../actions/index";
 
 //components
+import TodoIndex from "./TodoIndex";
 
 class Form extends Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class Form extends Component {
     e.preventDefault();
     const todo = this.state.todo;
     this.props.addEvent(todo);
+    this.setState({ todo: "" });
   }
 
   render() {
@@ -33,7 +35,7 @@ class Form extends Component {
           <button className="add-btn">ADD</button>
         </form>
         <div className="todo-container">
-          {this.props.list.map((list, index) => {
+          {this.props.todo.map((list, index) => {
             return <TodoIndex list={list} key={index} />;
           })}
         </div>
